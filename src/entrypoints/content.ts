@@ -71,7 +71,7 @@ function setup() {
     }
   })
 
-  window.addEventListener("keypress", (e) => {
+  window.addEventListener("keyup", (e) => {
     if (e.ctrlKey && e.shiftKey && e.code === "KeyF") {
       toggle(filesHeaderElement)
     }
