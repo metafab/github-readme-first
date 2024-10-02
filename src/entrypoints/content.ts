@@ -33,14 +33,9 @@ function toggle(header: HTMLElement) {
 }
 
 function setup() {
-  // Only for repositories
-  if (document.location.pathname.match(/\//g)?.length !== 2) {
-    return
-  }
-
   const filesHeaderElement = document.getElementById("folders-and-files")
   if (!filesHeaderElement) {
-    console.warn("GHRF", "Header not found")
+    console.debug("GHRF", "Header not found")
     return
   }
 
