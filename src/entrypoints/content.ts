@@ -33,7 +33,7 @@ function toggle(header: HTMLElement) {
 }
 
 function setup() {
-  const filesHeaderElement = document.getElementById("folders-and-files")
+  const filesHeaderElement = document.getElementById(headerId)
   if (!filesHeaderElement) {
     console.debug("GHRF", "Header not found")
     return
@@ -44,22 +44,22 @@ function setup() {
 
   const style = document.createElement("style")
   style.textContent = `
-    #folders-and-files::before {
+    #${headerId}::before {
       color: darkseagreen;
       content: "˅ Hide ";
     }
-    #folders-and-files.collapsed::before {
+    #${headerId}.collapsed::before {
       content: "˃ Show ";
     }
-    #folders-and-files {
+    #${headerId} {
       font-size: 1rem;
       margin-bottom: 16px;
       cursor: pointer;
     }
-    #folders-and-files.collapsed {
+    #${headerId}.collapsed {
       margin-bottom: 0;
     }
-    #folders-and-files.collapsed + * {
+    #${headerId}.collapsed + * {
       display: none;
     }
   `
@@ -79,3 +79,5 @@ function setup() {
 
   toggle(filesHeaderElement)
 }
+
+const headerId = "folders-and-files"
