@@ -3,7 +3,7 @@
   "description": "See README at the top of GitHub's repositories instead of files",
   "author": "metaSapiens",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
     "dev": "wxt",
