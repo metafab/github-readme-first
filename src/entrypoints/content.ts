@@ -33,6 +33,10 @@ function toggle(header: HTMLElement) {
 }
 
 function setup() {
+  if (!document.getElementById(readmeId) && !document.querySelector('[data-content="README"]')) {
+    console.debug("GHRF", "Readme not found")
+    return
+  }
   const filesHeaderElement = document.getElementById(headerId)
   if (!filesHeaderElement) {
     console.debug("GHRF", "Header not found")
@@ -81,3 +85,4 @@ function setup() {
 }
 
 const headerId = "folders-and-files"
+const readmeId = "readme"
