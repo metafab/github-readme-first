@@ -33,15 +33,22 @@ function toggle(header: HTMLElement) {
 }
 
 function setup() {
-  if (!document.getElementById(readmeId) && !document.querySelector('[data-content="README"]')) {
-    console.debug("GHRF", "Readme not found")
-    return
-  }
   const filesHeaderElement = document.getElementById(headerId)
   if (!filesHeaderElement) {
     console.debug("GHRF", "Header not found")
     return
   }
+  if (currentFilesHeaderElement === filesHeaderElement) {
+    console.debug("GHRF", "Header not changed")
+    return
+  }
+
+  if (!document.getElementById(readmeId) && !document.querySelector('[data-content="README"]')) {
+    console.debug("GHRF", "Readme not found")
+    return
+  }
+
+  console.log("GHRF", "Setting up")
 
   filesHeaderElement.setAttribute("title", "Powered by the GitHub Readme First browser extension")
   filesHeaderElement.classList.remove("sr-only")
@@ -81,8 +88,12 @@ function setup() {
     }
   })
 
+  currentFilesHeaderElement = filesHeaderElement
+
   toggle(filesHeaderElement)
 }
 
 const headerId = "folders-and-files"
 const readmeId = "readme"
+
+let currentFilesHeaderElement: HTMLElement | null = null
