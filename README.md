@@ -1,4 +1,26 @@
 # GitHub Readme First
+<div style="display: flex; flex-direction: row; gap: 1em">
+    <div>
+        Available for Chrome<br>
+        <a href="https://chromewebstore.google.com/detail/github-readme-first/hknjjcclkjaocphdlpbfccojankachkm">
+            <img src="./assets/chrome-store.png" alt="Chrome" style="height: 60px; object-fit: contain">
+        </a>
+    </div>
+    &nbsp;
+    <div>
+        Available for Firefox<br>
+        <a href="https://addons.mozilla.org/fr/firefox/addon/github-readme-first/">
+            <img src="./assets/firefox-store.png" alt="Firefox" style="height: 60px; object-fit: contain">
+        </a>
+    </div>
+    &nbsp;
+    <div>
+        Available for Edge<br>
+        <a href="https://microsoftedge.microsoft.com/addons/detail/github-readme-first/dkbbdklmkkmnpiddpidkaahbcabgcfom">
+            <img src="./assets/edge-store.png" alt="Edge" style="height: 60px; object-fit: contain">
+        </a>
+    </div>
+</div>
 
 ## The Why
 
@@ -10,8 +32,6 @@ This extension hides the files block that jumps at your face:
 1. The `Folders and files` section is now collapsed by default
 2. You can now show the files by clicking on `Show Folders and files` or by using the `ctrl+shift+F` keyboard shortcut
 3. Clicking or using the shortcut again will hide the files again
-
-_Question for you: What's the shortcut on Mac?_
 
 ![with screenshot](/assets/with.png "The extension in action")
 ![without screenshot](/assets/without.png "without the extension")
